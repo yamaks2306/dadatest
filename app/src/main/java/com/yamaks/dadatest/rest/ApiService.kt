@@ -24,19 +24,17 @@ interface ApiService {
 
 class ApiHelper(private val apiService: ApiService) {
 
-    suspend fun getCompanies() = apiService.getCompanies(
+    suspend fun getCompanies(query: String) = apiService.getCompanies(
         authorization,
         accept,
         content_type,
-        query
+        RequestBody(query, 10)
     )
 
     companion object {
         private const val authorization  = "Token"
         private const val accept = "application/json"
         private const val content_type = "application/json"
-        private val query = RequestBody("Текст запроса", 10)
-
     }
 }
 
@@ -62,5 +60,5 @@ object RetrofitBuilder {
 
 class MainRepository(private val apiHelper: ApiHelper) {
 
-    suspend fun getCompanies() = apiHelper.getCompanies()
+    suspend fun getCompanies(query: String) = apiHelper.getCompanies(query)
 }
