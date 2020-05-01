@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="center_vertical"
+        android:minHeight="80dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:backgroundTint="@color/itemBackground"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            tools:text="ООО Гротем"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/company_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:backgroundTint="@color/itemBackground"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            tools:text="г.Санкт-Петербургб ул.Воронежская, д.5"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/company_inn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:backgroundTint="@color/itemBackground"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            tools:text="782342123242111"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
