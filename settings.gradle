@@ -1,0 +1,2 @@
+rootProject.name='dadatest'
+include ':app'
