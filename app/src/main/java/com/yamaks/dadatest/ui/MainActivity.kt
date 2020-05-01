@@ -1,6 +1,7 @@
 package com.yamaks.dadatest.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -35,17 +36,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.companiesRv.adapter = adapter
 
-        val query = binding.queryText.text.toString()
-
         val button = binding.buttonFind
 
         button.setOnClickListener {
-            findCompanies(query)
+            findCompanies(binding.queryText.text.toString())
         }
 
     }
-
-
 
     private fun findCompanies(query: String) {
         viewModel.getCompanies(query ).observe(this, Observer {
